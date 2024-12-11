@@ -120,46 +120,41 @@ h2 {
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
-    .content {
-        padding: 5% 5%;
-        max-width: 400px;
-        margin: 20px 10px;
-        z-index: 1;
-        height: fit-content;
+    .banner {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto; /* Enable scrolling */
+        height: 100vh; /* Full viewport height */
     }
 
-    .banner {
-        overflow: scroll;
+    .content {
+        padding: 10px;
+        max-width: 100%; /* Use full width */
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 15px; /* Spacing between grid items */
+        justify-items: center; /* Center align grid items horizontally */
+    }
+
+    .person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .portrait {
-        width: 200px;
-        height: 200px;
-    }
-
-    h1 {
-        font-size: 2.8em;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .description, .additional-text {
-        font-size: 14px;
+        width: 100px; /* Adjusted size for small screens */
+        height: 100px;
+        margin-bottom: 10px; /* Spacing between image and button */
     }
 
     .button {
-        padding: 15px 20px;
-        font-size: 1.1em;
-    }
-
-    .social-btn {
-        padding: 15px;
-    }
-
-    .social-btn img {
-        width: 25px;
-        height: 25px;
+        padding: 10px 15px;
+        font-size: 0.9em;
+        width: auto; /* Automatically adjust to content width */
+        max-width: 100px; /* Match the portrait's width */
+        text-align: center;
     }
 }
